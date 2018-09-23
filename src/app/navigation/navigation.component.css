@@ -1,0 +1,11 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.no-background {
+  background: transparent;
+}
+
+.menu-button {
+  margin: 0 10px;
+}
