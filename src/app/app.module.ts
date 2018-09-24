@@ -23,11 +23,12 @@ import {
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 import { ProjectsAndConferencesComponent } from './projects-and-conferences/projects-and-conferences.component';
+import { ContactComponent } from './contact/contact.component';
 
 library.add(faTwitter, faLinkedin, faGithub);
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, AboutMeComponent, ProjectsAndConferencesComponent],
+  declarations: [AppComponent, NavigationComponent, AboutMeComponent, ProjectsAndConferencesComponent, ContactComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
