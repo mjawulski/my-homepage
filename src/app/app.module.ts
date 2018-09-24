@@ -11,7 +11,8 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatGridListModule
 } from '@angular/material';
 import { AboutMeComponent } from './about-me/about-me.component';
 
@@ -28,7 +29,13 @@ import { ContactComponent } from './contact/contact.component';
 library.add(faTwitter, faLinkedin, faGithub);
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, AboutMeComponent, ProjectsAndConferencesComponent, ContactComponent],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    AboutMeComponent,
+    ProjectsAndConferencesComponent,
+    ContactComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
