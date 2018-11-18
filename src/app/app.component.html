@@ -1,4 +1,17 @@
 <app-navigation></app-navigation>
-<app-about-me></app-about-me>
-<app-projects-and-conferences></app-projects-and-conferences>
-<app-contact></app-contact>
+<mat-grid-list [cols]="cols | async" rowHeight="650px">
+  <mat-grid-tile id="about-me"> <app-about-me></app-about-me> </mat-grid-tile>
+  <mat-grid-tile *ngIf="areHeadersVisible">
+    <h1 class="accent">CZEŚĆ!</h1>
+  </mat-grid-tile>
+  <mat-grid-tile *ngIf="areHeadersVisible">
+    <h1 class="accent">PROJEKTY I KONFERENCJE</h1>
+  </mat-grid-tile>
+  <mat-grid-tile id="projects">
+    <app-projects-and-conferences></app-projects-and-conferences>
+  </mat-grid-tile>
+  <mat-grid-tile id="contact"> <app-contact></app-contact> </mat-grid-tile>
+  <mat-grid-tile *ngIf="areHeadersVisible">
+    <h1 class="accent">KONTAKT</h1>
+  </mat-grid-tile>
+</mat-grid-list>

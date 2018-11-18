@@ -3,9 +3,21 @@
 }
 
 .no-background {
-  background: transparent;
+  background: #ffffff;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
 }
 
 .menu-button {
   margin: 0 10px;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }

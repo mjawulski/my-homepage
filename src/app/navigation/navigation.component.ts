@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Component, HostListener } from '@angular/core';
+import {
+  BreakpointObserver,
+  Breakpoints,
+  BreakpointState
+} from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -9,12 +13,17 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
+  isScrolledDown = false;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
-    
-  constructor(private breakpointObserver: BreakpointObserver) {}
-  
+  @HostListener('window:scroll', ['$event'])
+  setShadow(event) {
+    this.isScrolledDown = window.pageYOffset > 80;
   }
+
+  constructor() {}
+
+  scrollTo(elementName) {
+    const el = document.getElementById(elementName);
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}

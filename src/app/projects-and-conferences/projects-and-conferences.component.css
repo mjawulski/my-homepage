@@ -1,6 +1,5 @@
 .card-cover-image {
-  width: 448px;
-  height: auto;
+  background-size: cover;
 }
 
 #projects-and-conferences-card {

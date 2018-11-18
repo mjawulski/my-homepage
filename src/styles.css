@@ -8,8 +8,11 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-
 a {
+  color: #303f9f;
+}
+
+.accent {
   color: #ff99bc;
 }
 

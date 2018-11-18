@@ -1,7 +1,7 @@
-<mat-toolbar class="no-background">
+<mat-toolbar class="no-background sticky" [class.shadow]="isScrolledDown">
   <span class="spacer"></span>
-  <button mat-stroked-button class="menu-button" color="accent">O mnie</button>
-  <button mat-stroked-button class="menu-button" color="accent">Projekty</button>
-  <button mat-stroked-button class="menu-button" color="accent">Kontakt</button>
-  <button mat-stroked-button class="menu-button" color="accent">Blog</button>
+  <button mat-stroked-button class="menu-button" color="primary" (click)="scrollTo('about-me')">O mnie</button>
+  <button mat-stroked-button class="menu-button" color="primary" (click)="scrollTo('projects')">Projekty</button>
+  <button mat-stroked-button class="menu-button" color="primary" (click)="scrollTo('contact')">Kontakt</button>
+  <a href="http://mjawulski.pl"><button mat-stroked-button class="menu-button" color="primary">Blog</button></a>
 </mat-toolbar>
