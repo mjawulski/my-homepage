@@ -22,7 +22,7 @@ module.exports = function(config) {
     },
     reporters: ['progress', 'kjhtml'],
     customLaunchers: {
-      ChromeHeadless: {
+      ChromeHeadlessCI: {
         base: 'Chrome',
         flags: [
           '--headless',
