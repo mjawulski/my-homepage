@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectsAndConferencesComponent } from './projects-and-conferences.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ProjectsAndConferencesComponent', () => {
   let component: ProjectsAndConferencesComponent;
@@ -8,9 +9,9 @@ describe('ProjectsAndConferencesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjectsAndConferencesComponent ]
-    })
-    .compileComponents();
+      declarations: [ProjectsAndConferencesComponent],
+      schemas: [NO_ERRORS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
