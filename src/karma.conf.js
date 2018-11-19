@@ -22,6 +22,10 @@ module.exports = function(config) {
     },
     reporters: ['progress', 'kjhtml'],
     customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      },
       ChromeHeadlessCI: {
         base: 'Chrome',
         flags: [
@@ -37,7 +41,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'ChromeHeadlessNoSandbox'],
     singleRun: false
   });
 };
