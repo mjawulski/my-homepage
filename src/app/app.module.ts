@@ -26,6 +26,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { ProjectsAndConferencesComponent } from './projects-and-conferences/projects-and-conferences.component';
 import { ContactComponent } from './contact/contact.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 library.add(faTwitter, faLinkedin, faGithub);
 
@@ -49,7 +51,10 @@ library.add(faTwitter, faLinkedin, faGithub);
     MatListModule,
     MatCardModule,
     MatGridListModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
